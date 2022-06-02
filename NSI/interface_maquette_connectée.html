@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+      <style>body,main{min-height:100vh}.button,.ham{cursor:pointer}body{background:#2e2d26;color:#e8f5f5;width:100%;margin:0;text-align:center}.nav-sub,header{background:#59402d}footer{background-color:#433c3c}.next,.prev,footer p,h1{color:#f4f4f4}.bar1,.bar2,.bar3,.dot{background-color:#101010}#switch_theme :hover{background-color:#111800}.next:hover,.prev:hover{background-color:rgba(0,0,0,.8)}.active,.dot:hover{background-color:#717171}.mySlides img{border:5px solid #101010}.barre,.barre_petite{background-color:#f4f4f4}.clair{background:#ccd3db;color:#101010}.clair .nav-sub,.clair header{background:#ac541c}.clair footer{background-color:#111800}.clair h1,.next,.prev{color:#f4f4f4}.nav-link,a:any-link{color:inherit;text-decoration:none}.bar1,.bar2,.bar3{background-color:#101010}.clair #switch_theme :hover{background-color:#111800}.clair .next:hover,.clair .prev:hover{background-color:rgba(0,0,0,.8)}.clair .barre,.clair .barre_petite{background-color:#101010}header{z-index:100;height:70px;position:fixed;top:0;left:0;width:100%}.bar1,.bar2,.bar3,.barre,.barre_petite{height:3px;display:block}main{position:relative;margin:72px 80px 10px;padding:20px}.logo{max-width:fit-content;min-height:32px;position:fixed;top:15px;left:50px}#switch_theme,.clair #theme_dark,.ham,.nav-sub{position:absolute}.barre{width:50%;margin:5px auto}.barre_petite{width:20%;margin:5px 0}p{font-family:Quicksand,sans-serif;line-height:1em;font-size:14px}h1,h2{font-family:'Almendra SC',serif}h1{font-size:18px}.button,h2{font-size:25px}h2{margin:50px auto 30px}h3{margin-bottom:25px}.ham{top:23px;left:5px;display:block}.change .bar1{transform:rotate(45deg) translate(8px,3px)}.change .bar2{opacity:0}.change .bar3{transform:rotate(-45deg) translate(8px,-3px)}.bar1,.bar2,.bar3{width:35px;margin:5px auto;transition:.4s}.list-item{padding:10px;list-style:none}.nav-sub{visibility:hidden;padding:0 10px;top:54px;left:-6px;flex-direction:column;transition:transform .3s ease-in;transform:translate(100%);height:100vh}.nav-change{transform:translate(0);visibility:visible}#switch_theme{right:5px;top:24px;box-sizing:border-box;display:block;transform:scale(var(--ggs,1));width:24px;height:24px;background:linear-gradient(to bottom,currentColor 4px,transparent 0) 5px -6px/2px 6px no-repeat,linear-gradient(to bottom,currentColor 4px,transparent 0) 5px 14px/2px 6px no-repeat,linear-gradient(to bottom,currentColor 4px,transparent 0) -8px 5px/6px 2px no-repeat,linear-gradient(to bottom,currentColor 4px,transparent 0) 14px 5px/6px 2px no-repeat;border-radius:100px;box-shadow:inset 0 0 0 2px;border:6px solid transparent}.clair #switch_theme{visibility:hidden}#theme_dark,#theme_dark::after{visibility:hidden;box-shadow:none}.clair #theme_dark,.clair #theme_dark::after{visibility:visible;display:block;box-sizing:border-box;border-radius:50%}.clair #theme_dark{overflow:hidden;right:5px;top:26px;transform:rotate(-135deg) scale(var(--ggs,1));width:20px;height:20px;border:2px solid;border-bottom-color:transparent}.clair #theme_dark::after{content:"";position:absolute;width:12px;height:18px;border:2px solid transparent;box-shadow:0 0 0 2px;top:8px;left:2px}footer{display:grid;grid-template-columns:100%;grid-template-rows:min-content;grid-auto-flow:row;justify-content:center;padding:0 5%;width:90%;height:auto;position:relative}@media (max-width:400px){main{margin:72px 20px 10px;padding:5px}}.button{display:block;width:80px;border:none;padding:13px 30px;text-decoration:none;margin:0 auto 35px;background-color:#1197cc;box-shadow:#094066 4px 4px 0;border-radius:8px;transition:transform .2s,box-shadow .2s}.button-off,.button-on:active{transform:translateY(4px) translatex(4px);box-shadow:#094066 0 0 0}.button-off:active,.button-on{box-shadow:#0e6aac 4px 4px 0}</style>
+       <meta name="viewport" content="width=device-width,   initial-scale=1.0, user-scalable=no\">
+       <title>Controle à distance</title> 
+</head>
+    <body>
+        <header>
+            <div class="logo"><h1>Maison connect&eacute - serveur web</h1></div>
+            <nav> 
+              <div class="ham" >  
+                <span class="bar1"></span>  
+                <span class="bar2"></span>  
+                <span class="bar3"></span>  
+              </div>  
+              <ul class="nav-sub">  
+                <li class="list-item"><p  class="nav-link">Temp&eacuterature :</p></li>  
+                <li class="list-item"><p  class="nav-link">Luminosit&eacute :</p></li>  
+              </ul>
+            </nav> 
+            <div id="switch_theme" onclick="changeTheme();"></div>
+            <div id="theme_dark" onclick="changeTheme();"></div>
+        </header>
+        <main>
+
+        </main>
+        <footer>
+          <p>Site cr&eacutee par la team paint au chocolat <br> Tous droits r&eacuteserv&eacutes</p>
+        </footer> 
+        <script>const hamburger = document.querySelector(".ham");  
+          const navsub = document.querySelector(".nav-sub");  
+          hamburger.addEventListener('click', () => {  
+           hamburger.classList.toggle("change")  
+           navsub.classList.toggle("nav-change")  
+          });
+          function changeTheme() {
+          var element = document.body;
+          element.classList.toggle("clair") }
+          </script>
+	</body>
+</html>
