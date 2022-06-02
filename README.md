@@ -1,2 +1,2 @@
-# divers
+# Divers
 Code I did for school
